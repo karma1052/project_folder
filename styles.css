@@ -1,0 +1,107 @@
+/* 全体のリセット */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #ffffff; /* 背景色 */
+    line-height: 1.6;
+}
+
+/* 全体コンテナ */
+.container {
+    max-width: 800px; /* 最大幅 */
+    margin: 30px auto; /* 上下30px、左右中央配置 */
+    background: #fff; /* 白背景 */
+    padding: 20px; /* 内側の余白 */
+    border-radius: 5px; /* 角を丸くする */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影を付ける */
+}
+
+/* ヘッダー */
+h1 {
+    font-size: 24px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    text-align: center; /* 中央寄せ */
+}
+/*index.php*/
+.main {
+    background-color:#d58ecb;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main form {
+    text-align: center;
+}
+
+.text {
+   margin: 5px;
+}
+
+.main button {
+    margin-right:30px;
+}
+/*dashboard.php*/
+.admin-view {
+    background-color:#ffffff;
+    width: 100%;
+    position: absolute;
+    height:100%;
+}
+
+.admin-view p {
+    margin:40px;
+    text-align:center;
+}
+
+.admin-view a {
+    color:#000000;
+}
+
+/*manage_news.php*/
+
+.admin-news {
+        color:#000000;
+        width: 100%;
+        position: absolute;
+        height:100%;
+        padding:auto;
+        text-align:center;
+}
+
+.user-view {
+    background-color:#d58ecb;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    height: 20%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-view a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
