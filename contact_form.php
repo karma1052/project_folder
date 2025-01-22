@@ -42,41 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせフォーム</title>
-    <style>
-        form {
-            max-width: 500px;
-            margin: auto;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, textarea, button {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .error {
-            color: red;
-        }
-        .success {
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 style="text-align: center;">お問い合わせ</h1>
-
     <div style="max-width: 600px; margin: auto;">
+    <h1>お問い合わせ</h1>
         <!-- エラーメッセージ -->
         <?php if ($error): ?>
             <p class="error"><?php echo htmlspecialchars($error); ?></p>

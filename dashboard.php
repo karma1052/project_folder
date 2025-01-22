@@ -14,10 +14,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <title>管理画面</title>
 </head>
 <body>
-    <div class="admin-view">
-    <p><a href="manage_news.php">新着情報の管理</a></p>
-    <p><a href="manage_contacts.php">お問い合わせ内容の管理</a></p>
-    <p><a href="logout.php">ログアウト</a></p>
+    <div class="container">
+    <h1>管理画面</h1>
+    <a href="manage_news.php" class="button">新着情報の管理</a>
+    <a href="manage_contacts.php" class="button">お問い合わせ内容の管理</a>
+    <a href="employee_management.php" class="button">ユーザー情報</a>
+    <a href="logout.php" class="button logout">ログアウト</a>
     </div>
 </body>
 </html>

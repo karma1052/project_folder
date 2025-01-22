@@ -20,17 +20,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ管理</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSSの適用 -->
 </head>
 <body>
-    <h2>お問い合わせ管理</h2>
-    <?php
-    $result = $conn->query("SELECT * FROM contact");
-    while ($row = $result->fetch_assoc()) {
-        echo "<p>名前: {$row['name']} | メール: {$row['email']} | 内容: {$row['message']}
-        <form style='display:inline;' method='post'><input type='hidden' name='id' value='{$row['id']}'><button type='submit' name='delete_contact'>削除</button></form></p>";
-    }
-    ?>
-    <a href="dashboard.php">管理画面に戻る</a>
+    <div class="container">
+        <h1>お問い合わせ管理</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名前</th>
+                    <th>メール</th>
+                    <th>内容</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $result = $conn->query("SELECT * FROM contact");
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                            <td>" . htmlspecialchars($row['id']) . "</td>
+                            <td>" . htmlspecialchars($row['name']) . "</td>
+                            <td>" . htmlspecialchars($row['email']) . "</td>
+                            <td>" . nl2br(htmlspecialchars($row['message'])) . "</td>
+                            <td>
+                                <form method='post'>
+                                    <input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>
+                                    <button type='submit' name='delete_contact' class='button delete'>削除</button>
+                                </form>
+                            </td>
+                          </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+        <a href="dashboard.php" class="button">管理画面に戻る</a>
+    </div>
 </body>
 </html>
